@@ -11,15 +11,17 @@
 }
 #email,
 .password,
-#name{
+#name,
+#phone-number,
+#address{
     width: calc(100% - 60px);
     height: 65px;
     padding: 0 30px;
     outline: none;
 }
-#email,
-#password1,
-#password2{
+#login-form #email,
+#login-form #password1,
+#login-form #password2{
     margin-bottom: 10px;
 }
 .toggle-button{

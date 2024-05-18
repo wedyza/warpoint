@@ -1,0 +1,121 @@
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.h2-text{
+    align-self: flex-start;
+}
+.purchase-card{
+    width: 500px;
+    height: 346px;
+    padding: 30px;
+    background-color: var(--card-background);
+    position: relative;
+}
+.purchase-img-container{
+    width: 204px;
+    height: 159px;
+    position: relative;
+    overflow: hidden;
+}
+.purchase-img-container > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 204px;
+    height: 159px;
+    object-fit: cover;
+}
+.purchase-full-info{
+    display: flex;
+    gap: 29px;
+    margin-bottom: 53px;
+}
+.date{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.product-category{
+    color: var(--gray-text);
+}
+.price{
+    color: var(--red-color);
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+.review-form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.review-form > button{
+    width: 268px;
+    height: 49px;
+    align-self: flex-end;
+    background-color: var(--blue-color);
+    border: none;
+    color: var(--white-text);
+}
+.review-input{
+    width: calc(100% - 60px);
+    height: 65px;
+    background-color: var(--light-gray);
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: var(--white-text);
+}
+.symbols-amount,
+.review-stars{
+    position: absolute;
+    top: -25px;
+}
+.review-stars{
+    left: 0px;
+    top: -30px;
+}
+.symbols-amount{
+    right: -0;
+    color: var(--gray-text);
+}
+#shopping-list{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.review-content p{
+    color: var(--white-text);
+}
+.review-header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.review-content{
+    margin-top: 15px;
+    display: flex;
+    gap: 72px;
+    align-items: flex-start;
+}
+.review-done{
+    margin-top: -23px;
+}
+.review-rating{
+    display: flex;
+    gap: 5px;
+}
+.review-text{
+    max-height: 96px;
+    overflow: hidden;
+}
+.review-text > p{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}

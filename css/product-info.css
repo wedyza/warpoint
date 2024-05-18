@@ -1,0 +1,147 @@
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#main-description{
+    width: 380px;
+}
+#main-product-info{
+    display: flex;
+    gap: 108px;
+}
+.page-path{
+    align-self: flex-start;
+    color: var(--gray-text);
+}
+#product-page{
+    width: 100%;
+    margin-top: 30px;
+}
+#product-name > .description-text{
+    color: var(--gray-text);
+}
+#main-product-info{
+    margin-left: 59px;
+}
+#main-description{
+    color: var(--white-text);
+    margin-top: 40px;
+}
+#rating-container{
+    height: 39px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#rating-value{
+    color: var(--white-text);
+    margin-left: 10px;
+}
+#total-amount{
+    color: var(--red-color);
+    margin-top: 30px;
+}
+#sizes-text{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.sizes-list{
+    display: flex;
+    margin-top: 30px;
+    gap: 26px;
+}
+.sizes-list > button{
+    background-color: transparent;
+    color: var(--white-text);
+    border: none;
+}
+.sizes-list > .chosen-size{
+    color: var(--blue-color);
+    text-decoration: underline;
+}
+#full-product-info{
+    margin-top: 70px;
+}
+#product-characteristics{
+    display: flex;
+    flex-direction: column;
+    color: var(--white-text);
+    margin-top: 20px;
+    width: 605px;
+}
+.product-characteristic{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray-text);
+}
+.characteristic-value{
+    width: 50%;
+}
+#product-info-right{
+    position: relative;
+}
+#add-to-cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 49px;
+    background-color: var(--blue-color);
+    border: none;
+    transition: .1s;
+}
+#add-to-cart:hover{
+    background-color: #2E5AC5;
+}
+#reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+#reviews-header{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+#reviews-left,
+#reviews-right{
+    background-color: transparent;
+    border: none;
+}
+#change-reviews-page{
+    display: flex;
+    gap: 17px;
+}
+.review-card{
+    position: relative;
+    width: 470px;
+    padding: 30px;
+    padding-bottom: 60px;
+    background-color: var(--card-background);
+}
+.review-header{
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+.review-content{
+    color: var(--white-text);
+    margin-top: 30px;
+    width: 367px;
+}
+.review-date{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+#reviews-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+    justify-items: center;
+}

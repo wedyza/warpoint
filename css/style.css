@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    background-color: var(--background-color);
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --background-color: #1B1B1B;
+    --light-gray: #474747;
+    --dark-gray: #333333;
+    --red-color: #E0353F;
+    --blue-color: #3970F6;
+    --card-background: #262626;
+    --gray-text: #A3A3A3;
+    --white-text: #F4F4F4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+.button-text{
+    font-size: 14px;
+    color: var(--white-text);
+}
+.price-text{
+    font-size: 24px;
+    font-weight: 800;
+}
+.price-symbol{
+    font-size: 24px;
+    font-weight: 600;
+}
+h1,
+.h1-text{
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 92px;
+    color: var(--white-text);
+    font-weight: 500;
+    letter-spacing: -6px;
+}
+.big-text{
+    font-size: 22px;
+    color: var(--gray-text);
+    font-weight: 500;
+}
+.product-title{
+    font-size: 24px;
+    font-family: 'Oswald';
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    color: var(--white-text);
+}
+.description-text{
+    font-size: 16px;
+    color: var(--white-text);
+}
+.input-text{
+    font-size: 14px;
+    color: var(--gray-text);
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    height: 78px;
+}
+.logo-link{
+    height: 41px;
+    width: 233px;
+}
+#nav-buttons{
+    display: flex;
+    gap: 30px;
+}
+.nav-button{
+    display: flex;
+    background-color: var(--red-color);
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.points-count{
+    color: var(--red-color);
+}
+.points-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--dark-gray);
+    padding: 9px 12px;
+}
+.points-count{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/*header*/

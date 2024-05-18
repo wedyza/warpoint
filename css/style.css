@@ -21,6 +21,9 @@ html{
 a{
     text-decoration: none;
 }
+ul{
+    list-style-type: none;
+}
 :root{
     --background-color: #1B1B1B;
     --light-gray: #474747;
@@ -62,7 +65,7 @@ h1,
     color: var(--gray-text);
     font-weight: 500;
 }
-.product-title{
+.normal-title{
     font-size: 24px;
     font-family: 'Oswald';
     font-weight: 600;
@@ -77,6 +80,10 @@ h1,
 .input-text{
     font-size: 14px;
     color: var(--gray-text);
+}
+.footer-text{
+    font-size: 16px;
+    color: var(--white-text);
 }
 
 /*header*/
@@ -119,3 +126,43 @@ header{
     gap: 5px;
 }
 /*header*/
+
+/*footer*/
+footer{
+    height: 447px;
+    display: flex;
+    justify-content: center;
+    gap: 93px;
+}
+.footer-company{
+    margin-right: 2px;
+}
+.company-info,
+.copyrights{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.company-info{
+    margin-top: 30px;
+}
+.apps-links{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 10px;
+}
+.footer-links{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-links > li{
+    cursor: pointer;
+    transition: .1s;
+}
+.footer-links > li:hover{
+    color: var(--blue-color);
+}
+/*footer*/

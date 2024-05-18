@@ -100,6 +100,7 @@ main{
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    margin-top: 100px;
 }
 #reviews-header{
     width: 100%;
@@ -144,4 +145,41 @@ main{
     gap: 70px;
     align-items: center;
     justify-items: center;
+}
+.image-container{
+    width: 433px;
+    height: 318px;
+}
+.small-imgs{
+    display: flex;
+    gap: 6px;
+    margin-top: 15px;
+}
+.small-image-container{
+    width: 50px;
+    height: 50px;
+}
+.image-container img,
+.small-image-container img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+#gallery{
+    margin-top: 50px;
+    position: relative;
+}
+#img-buttons{
+    position: absolute;
+    top: 145px;
+    left: -60px;
+    width: calc(100% + 120px);
+    display: flex;
+    justify-content: space-between;
+}
+#img-to-left,
+#img-to-right{
+    background-color: transparent;
+    border: none;
 }

@@ -43,7 +43,20 @@
             <div id="main-product-info">
                 <div id="product-info-left">
                     <div id="gallery">
-
+                        <div class="image-container">
+                            <img src="img/appstore.png" class="big-image">
+                        </div>
+                        <div class="small-imgs">
+                            <div class="small-image-container"><img src="img/appstore.png" class="small-img"></div>
+                            <div class="small-image-container"><img src="img/playmarket.png" class="small-img"></div>
+                            <div class="small-image-container"><img src="img/empty.png" class="small-img"></div>
+                            <div class="small-image-container"><img src="img/cover.png" class="small-img"></div>
+                            <div class="small-image-container"><img src="img/appstore.png" class="small-img"></div>
+                        </div>
+                        <div id="img-buttons">
+                            <button id="img-to-left"><img src="img/img-left.svg" alt="to left"></button>
+                            <button id="img-to-right"><img src="img/img-right.svg" alt="to right"></button>
+                        </div>                       
                     </div>
                     <div id="main-description" class="input-text">
                         <p>Идеальное сочетание комфорта и стиля. 
@@ -218,5 +231,36 @@
             </ul>            
         </div>
     </footer>
+    <script>
+        const smallImgs = document.querySelectorAll('.small-img');
+        const bigImageContainer = document.querySelector('.image-container');
+        const bigImage = document.querySelector('.big-image');
+        smallImgs.forEach((smallImg) => {
+            smallImg.addEventListener('click', () => {
+                const bigImageSrc = smallImg.src;
+                bigImage.src = bigImageSrc;
+                bigImage.alt = smallImg.alt;
+            });
+        });
+    </script>
+    <script>
+        const imgToLeft = document.querySelector('#img-to-left');
+        const imgToRight = document.querySelector('#img-to-right');
+        let currentIndex = 0;
+        smallImgs.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                bigImage.src = img.src;
+            });
+        });
+        imgToLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + smallImgs.length) % smallImgs.length;
+            bigImage.src = smallImgs[currentIndex].src;
+        });
+        imgToRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % smallImgs.length;
+            bigImage.src = smallImgs[currentIndex].src;
+        });
+    </script>
 </body>
 </html>

@@ -74,11 +74,11 @@ h1,
     color: var(--white-text);
 }
 .description-text{
-    font-size: 16px;
+    font-size: 14px;
     color: var(--white-text);
 }
 .input-text{
-    font-size: 14px;
+    font-size: 16px;
     color: var(--gray-text);
 }
 .footer-text{

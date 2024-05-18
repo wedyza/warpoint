@@ -46,8 +46,129 @@
             </div>
         </section>
         <section id="main-content">
-            <div id="filters-container">
-
+            <div id="filters-container" class="button-text">
+                <div class="filter-container">
+                    <div class="filter-header">
+                        <p class="filter-title" id="category-title">Категория</p>
+                        <img src="img/bottom-arrow.svg" width="6px" height="6px">
+                    </div>
+                    <ul class="filter-options description-text filter-with-second">
+                        <li class="filter-option"><p>Новинки</p></li>
+                        <li class="li-categories filter-option">
+                            <p>Обувь</p>
+                            <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
+                            <ul class="filter-options-second">
+                                <li>Все</li>
+                                <li>Сланцы</li>
+                                <li>Кеды</li>
+                            </ul>
+                        </li>
+                        <li class="li-categories filter-option">
+                            <p>Аксессуары</p>
+                            <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
+                            <ul class="filter-options-second">
+                                <li>что-то</li>
+                                <li>что-то другое</li>
+                                <li>еще что-то</li>
+                            </ul>
+                        </li>
+                        <li class="li-categories filter-option">
+                            <p>Обувь</p>
+                            <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
+                            <ul class="filter-options-second">
+                                <li>Все</li>
+                                <li>Сланцы</li>
+                                <li>Кеды</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-container">
+                    <div class="filter-header">
+                        <p class="filter-title" id="price-title">Цена</p>
+                        <img src="img/bottom-arrow.svg" width="6px" height="6px">
+                    </div>
+                    <ul class="filter-options description-text">
+                        <li class="price-options">
+                            <div class="price-container">
+                                <input type="radio" id="price-1" name="price" value="750" class="radio-input">
+                                <img src="img/radio-false.svg" alt="unchecked" class="radio-img">
+                            </div>
+                            <label for="price-1">До 750</label>
+                        </li>
+                        <li class="price-options">
+                            <div class="price-container">
+                                <input type="radio" id="price-2" name="price" value="2000" class="radio-input">
+                                <img src="img/radio-false.svg" alt="unchecked" class="radio-img">
+                            </div>
+                            <label for="price-2">750 - 2000</label>
+                        </li>
+                        <li class="price-options">
+                            <div class="price-container">
+                                <input type="radio" id="price-3" name="price" value="7500" class="radio-input">
+                                <img src="img/radio-false.svg" alt="unchecked" class="radio-img">
+                            </div>
+                            <label for="price-3">2000 - 7500</label>
+                        </li>
+                        <li class="price-options">
+                            <div class="price-container">
+                                <input type="radio" id="price-4" name="price" value="10000000" class="radio-input">
+                                <img src="img/radio-false.svg" alt="unchecked" class="radio-img">
+                            </div>
+                            <label for="price-4">7500 и дороже</label>
+                        </li>
+                        <li class="price-options">
+                            <div class="price-container">
+                                <input type="radio" id="price-5" name="price" value="" class="radio-input">
+                                <img src="img/radio-false.svg" alt="unchecked" class="radio-img">
+                            </div>
+                            <label for="price-5">Неважно</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-container">
+                    <div class="filter-header">
+                        <p>Размер</p>
+                        <img src="img/bottom-arrow.svg" width="6px" height="6px">
+                    </div>
+                    <ul class="filter-options description-text">
+                        <li class="size-options">
+                            <div class="size-container">
+                                <input type="checkbox" id="size-xs" name="size" value="42" class="size-checkbox">
+                                <img src="img/chekbox-false.svg" alt="unchecked">
+                            </div>
+                            <label for="size-xs">XS (42)</label>
+                        </li>
+                        <li class="size-options">
+                            <div class="size-container">
+                                <input type="checkbox" id="size-s" name="size" value="44" class="size-checkbox">
+                                <img src="img/chekbox-false.svg" alt="unchecked">
+                            </div>
+                            <label for="size-s">S (44)</label>
+                        </li>
+                        <li class="size-options">
+                            <div class="size-container">
+                                <input type="checkbox" id="size-m" name="size" value="46" class="size-checkbox">
+                                <img src="img/chekbox-false.svg" alt="unchecked">
+                            </div>
+                            <label for="size-m">M (46)</label>
+                        </li>
+                        <li class="size-options">
+                            <div class="size-container">
+                                <input type="checkbox" id="size-l" name="size" value="48" class="size-checkbox">
+                                <img src="img/chekbox-false.svg" alt="unchecked">
+                            </div>
+                            <label for="size-l">L (48)</label>
+                        </li>
+                        <li class="size-options">
+                            <div class="size-container">
+                                <input type="checkbox" id="size-xl" name="size" value="50" class="size-checkbox">
+                                <img src="img/chekbox-false.svg" alt="unchecked">
+                            </div>
+                            <label for="size-xl">XL (50)</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div id="product-list">
                 <div class="product-card">
@@ -210,5 +331,71 @@
             </ul>            
         </div>
     </footer>
+    <script>
+        const radioButtons = document.querySelectorAll('.price-options input[type="radio"]');
+            radioButtons.forEach(radioButton => {
+            radioButton.addEventListener('click', () => {
+                const filterTitle = document.querySelector('#price-title');
+                if (radioButton.value === '') {
+                    filterTitle.textContent = 'Цена';
+                } else {
+                    const label = document.querySelector(`label[for="price-${radioButton.id.split('-').pop()}"]`);
+                    filterTitle.textContent = label.textContent;
+                }
+            });
+            });
+    </script>
+    <script>
+        const categoryOptions = document.querySelectorAll('.filter-option, .filter-options-second li');
+        categoryOptions.forEach(categoryOption => {
+            categoryOption.addEventListener('click', () => {
+                const filterTitle = document.querySelector('#category-title');
+                if (categoryOption.tagName === 'LI') {
+                    const parentList = categoryOption.closest('.filter-options-second');
+                    if (parentList) { // проверяем, что parentList не равен null
+                        const parentOption = parentList.closest('.filter-option');
+                        const selectedOptionText = categoryOption.textContent;
+                        filterTitle.textContent = selectedOptionText;
+                    }
+                } 
+                if (!categoryOption.querySelector('.filter-options-second')) {
+                    console.log('aaaa')
+                    const selectedOptionText = categoryOption.querySelector('p').textContent;
+                    filterTitle.textContent = selectedOptionText;
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.size-checkbox');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    const img = checkbox.nextElementSibling;
+                    console.log(checkbox.checked);
+                    if (checkbox.checked) {
+                        img.src = 'img/chekbox-true.svg';
+                    } else {
+                        img.src = 'img/chekbox-false.svg';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioInputs = document.querySelectorAll('.price-container .radio-input');
+            const radioImages = document.querySelectorAll('.price-container .radio-img');
+            radioInputs.forEach(function(radioInput) {
+                radioInput.addEventListener('change', function() {
+                    radioImages.forEach(function(img) {
+                        img.src = 'img/radio-false.svg';
+                    });
+                    const selectedImg = radioInput.nextElementSibling;
+                    selectedImg.src = 'img/radio-true.svg';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

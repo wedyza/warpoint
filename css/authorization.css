@@ -1,0 +1,70 @@
+#login-form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 462px;
+    gap: 20px;
+    margin-bottom: 200px;
+}
+.input-container{
+    position: relative;
+}
+#email,
+#password{
+    width: calc(100% - 60px);
+    height: 65px;
+    padding: 0 30px;
+    outline: none;
+}
+#email{
+    margin-bottom: 10px;
+}
+.error-input{
+    border: 1px solid var(--red-color);
+}
+.error-text{
+    color: var(--red-color);
+    position: absolute;
+    top: 68px;
+}
+#toggle-button{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 30px;
+    background-color: transparent;
+    border: none;
+}
+.forgot-password{
+    align-self: flex-end;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+form > button{
+    height: 80px;
+    background-color: var(--blue-color);
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+form > button:hover{
+    background-color: #2E5AC5;
+}
+.to-signup-title{
+    align-self:self-start;
+}
+.to-signup > p{
+    color: var(--white-text);
+    width: 219px;
+}
+.to-signup > a{
+    display: flex;
+    gap: 5px;
+}
+.to-signup{
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+}

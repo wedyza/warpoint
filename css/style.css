@@ -24,6 +24,13 @@ a{
 ul{
     list-style-type: none;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 130px;
+    margin-top: 100px;
+}
 :root{
     --background-color: #1B1B1B;
     --light-gray: #474747;
@@ -85,11 +92,16 @@ h1,
     font-size: 16px;
     color: var(--white-text);
 }
+.nav-text{
+    font-size: 14px;
+    font-weight: 400;
+}
 
 /*header*/
 header{
+    padding: 0 200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: end;
     height: 78px;
 }
@@ -100,6 +112,9 @@ header{
 #nav-buttons{
     display: flex;
     gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .nav-button{
     display: flex;

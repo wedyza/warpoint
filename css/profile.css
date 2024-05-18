@@ -21,6 +21,7 @@ main{
 }
 #profile-forms form{
     width: 462px;
+    position: relative;
 }
 #profile-forms input{
     width: 100%;

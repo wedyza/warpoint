@@ -73,9 +73,6 @@
     cursor: pointer;
     transition: .1s;
 }
-.product-to-cart:hover{
-    background-color: #2E5AC5;
-}
 .product-open-info{
     margin-top: 30px;
     display: flex;

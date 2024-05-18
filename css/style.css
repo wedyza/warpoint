@@ -145,6 +145,17 @@ h1,
     color: var(--white-text);
 }
 
+.black-button,
+.blue-button{
+    transition: .1s;
+}
+.black-button:hover{
+    background-color: var(--blue-color);
+}
+.blue-button:hover{
+    background-color: #2E5AC5;
+}
+
 /*header*/
 header{
     padding: 0 200px;

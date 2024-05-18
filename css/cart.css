@@ -170,9 +170,6 @@
     justify-content: center;
     transition: .1s;
 }
-.to-payment:hover{
-    background-color: #2E5AC5;
-}
 #use-points{
     font-size: 20px;
     background-color: transparent;

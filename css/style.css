@@ -174,13 +174,28 @@ header{
     transform: translate(-50%, -50%);
     color: var(--white-text);
 }
-.game-info{
+#game-info{
     position: absolute;
     right: -20px;
     background: transparent;
     border: none;
     height: 12px;
     cursor: pointer;
+}
+#game-info-text{
+    width: 258px;
+    height: 68px;
+    padding: 30px;
+    background-color: var(--dark-gray);
+}
+#game-info-container {
+    position: absolute;
+    right: -15px;
+    top: 68px;
+    display: none;
+}
+#game-info:hover + #game-info-container {
+    display: block;
 }
 .points-count{
     color: var(--red-color);

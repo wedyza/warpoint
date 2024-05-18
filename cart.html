@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-link">
+            <img src="img/logo.svg" alt="logo" width="233px" height="33px">
+        </a>
+        <nav id="nav-buttons">
+            <a href="#" class="nav-button"><img src="img/search.svg" alt="search"></a>
+            <a href="#" class="nav-button"><img src="img/profile.svg" alt="profile"></a>
+            <a href="#" class="nav-button"><img src="img/cart.svg" alt="cart"><p class="cart-amount">2</p></a>
+        </nav>
+        <div class="points-info">
+            <p class="button-text">Ваши баллы:</p>
+            <div class="points-count">
+                <p class="price-text">286</p>
+                <img src="img/points.svg" alt="points">
+            </div>
+            <button class="game-info"><img src="img/info.svg" alt="info"></button>
+        </div>
+    </header>
+    <main class="content">
+        <p class="normal-title cart-title">Мои покупки</p>
+        <section class="main-content">
+            <section id="cart-list">
+                <div class="cart-product-card">
+                    <div class="card-img-container">
+                        <img src="img/empty.png">
+                    </div>
+                    <div class="cart-product-info">
+                        <p class="product-category description-text">Обувь</p>
+                        <p class="card-text product-name">Кеды</p>
+                        <div class="product-price">
+                            <p class="price-text">150</p><p class="price-symbol">₽</p>
+                        </div>
+                        <div class="sizes-list">
+                            <p class="input-text">XS</p>
+                            <p class="input-text">S</p>
+                            <p class="input-text chosen-size">M</p>
+                            <p class="input-text">L</p>
+                            <p class="input-text">XL</p>
+                        </div>
+                    </div>
+                    <button class="remove-product"><img src="img/remove.svg"></button>
+                    <div class="change-amount-container normal-title">
+                        <button class="change-amount decrease-amount"><span>-</span></button>
+                        <span class="amount">5</span>
+                        <button class="change-amount increase-amount"><span>+</span></button>
+                    </div>
+                </div>
+                <div class="cart-product-card">
+                    <div class="card-img-container">
+                        <img src="img/empty.png">
+                    </div>
+                    <div class="cart-product-info">
+                        <p class="product-category description-text">Обувь</p>
+                        <p class="card-text product-name">Кеды</p>
+                        <div class="product-price">
+                            <p class="price-text">150</p><p class="price-symbol">₽</p>
+                        </div>
+                        <div class="sizes-list">
+                            <p class="input-text">XS</p>
+                            <p class="input-text">S</p>
+                            <p class="input-text chosen-size">M</p>
+                            <p class="input-text">L</p>
+                            <p class="input-text">XL</p>
+                        </div>
+                    </div>
+                    <button class="remove-product"><img src="img/remove.svg"></button>
+                    <div class="change-amount-container normal-title">
+                        <button class="change-amount decrease-amount"><span>-</span></button>
+                        <span class="amount">5</span>
+                        <button class="change-amount increase-amount"><span>+</span></button>
+                    </div>
+                </div>
+                <div class="cart-product-card">
+                    <div class="card-img-container">
+                        <img src="img/empty.png">
+                    </div>
+                    <div class="cart-product-info">
+                        <p class="product-category description-text">Обувь</p>
+                        <p class="card-text product-name">Кеды</p>
+                        <div class="product-price">
+                            <p class="price-text">150</p><p class="price-symbol">₽</p>
+                        </div>
+                        <div class="sizes-list">
+                            <p class="input-text">XS</p>
+                            <p class="input-text">S</p>
+                            <p class="input-text chosen-size">M</p>
+                            <p class="input-text">L</p>
+                            <p class="input-text">XL</p>
+                        </div>
+                    </div>
+                    <button class="remove-product"><img src="img/remove.svg"></button>
+                    <div class="change-amount-container normal-title">
+                        <button class="change-amount decrease-amount"><span>-</span></button>
+                        <span class="amount">5</span>
+                        <button class="change-amount increase-amount"><span>+</span></button>
+                    </div>
+                </div>
+            </section>
+            <section id="cart-info">
+                <div class="address-info">
+                    <p class="normal-title">Ваш адрес доставки</p>
+                    <p class="card-text" id="current-address">
+                        почтовое отделение (г. екатеринбург ул. ленина д. 12)
+                    </p>
+                    <button class="change-address card-text" id="change-address-button">Изменить</button>
+                    <form id="address-form" style="display: none;">
+                        <div class="adress-input">
+                            <input type="text" id="address" class="error-input" required>
+                            <p class="error-text nav-text">Неверный адрес</p>
+                        </div>
+                        <button type="submit" class="change-address card-text">Сохранить</button>
+                    </form>
+                </div>
+                <div class="delivery-info">
+                    <p class="normal-title">Доставка:</p>
+                    <p class="normal-title">Мы доставляем с помощью Cdek</p>
+                    <div class="delivery-city">
+                        <p class="card-text">В ваш город:</p>
+                        <div class="product-price">
+                            <p class="price-text">150</p><p class="price-symbol">₽</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-info">
+                    <div class="total-amount">
+                        <p class="normal-title">Итого:</p>
+                        <p id="total-amount" class="card-title">350 ₽</p>
+                    </div>
+                    <button id="use-points" class="default">
+                        Применить <span id="points-amount">266</span> баллов
+                    </button>
+                    <a href="#" class="to-payment button-text">Перейти к оплате</a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer-text">
+        <div class="footer-company">
+            <a href="#" class="logo-link">
+                <img src="img/logo.svg" alt="logo" width="233px" height="33px">
+            </a>
+            <div class="company-info">
+                <p>ИП Скоробогатов Владимир Владимирович</p>
+                <p>ИНН: 720509659197</p>
+                <p>ОГРНИП: 321665800029893</p>
+            </div>
+            <div class="apps-links">
+                <a href="#" class="app-link"><img src="img/appstore.png" alt="app store" width="160px" height="45px"></a>
+                <a href="#" class="app-link"><img src="img/playmarket.png" alt="google play" width="160px" height="45px"></a>
+            </div>
+            <div class="copyrights">
+                <p>© 2020-2023. WARPOINT. Все права защищены. </p>
+                <p>Копирование материалов сайта запрещено</p>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p class="normal-title">Информация</p>
+            <ul class="footer-links">
+                <li>Наши акции</li>
+                <li>О компании</li>
+                <li>Клубная карта</li>
+                <li>Статьи</li>
+                <li>Сертификаты</li>
+                <li>Лидерборд</li>
+            </ul>
+        </div>
+        <div class="footer-agreements">
+            <p class="normal-title">Соглашения</p>
+            <ul class="footer-links">
+                <li>Политика конфиденциальности</li>
+                <li>Политика использования Cookie</li>
+                <li>Пользовательское соглашение</li>
+                <li>Использование сертификатов</li>
+                <li>Наши реквизиты</li>
+                <li>Популярные вопросы</li>
+            </ul>            
+        </div>
+        <div class="footer-cooperation">
+            <p class="normal-title">сотрудничество</p>
+            <ul class="footer-links">
+                <li>Франшиза</li>
+                <li>Арендодателям</li>
+                <li>Вакансии</li>
+                <li>Инвестиции</li>
+                <li>Аренда оборудования</li>
+                <li>Контакты</li>
+            </ul>            
+        </div>
+    </footer>
+    <script>
+        const changeAmountContainers = document.querySelectorAll('.change-amount-container');
+        changeAmountContainers.forEach((container) => {
+            const decreaseButton = container.querySelector('.decrease-amount');
+            const increaseButton = container.querySelector('.increase-amount');
+            const amountSpan = container.querySelector('.amount');
+            let amount = parseInt(amountSpan.textContent);
+            decreaseButton.addEventListener('click', () => {
+                amount--;
+                if (amount < 0) {
+                    amount = 0;
+                }
+                amountSpan.textContent = amount;
+            });
+            increaseButton.addEventListener('click', () => {
+                amount++;
+                amountSpan.textContent = amount;
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const changeAddressButton = document.getElementById('change-address-button');
+            const currentAddress = document.getElementById('current-address');
+            const addressForm = document.getElementById('address-form');
+
+            changeAddressButton.addEventListener('click', function() {
+                currentAddress.style.display = 'none';
+                changeAddressButton.style.display = 'none';
+                addressForm.style.display = 'block';
+            });
+
+            addressForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const newAddress = document.getElementById('address').value;
+
+                if (newAddress.trim() !== '') {
+                    currentAddress.textContent = newAddress;
+                }
+
+                currentAddress.style.display = 'block';
+                changeAddressButton.style.display = 'block';
+                addressForm.style.display = 'none';
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const usePointsButton = document.getElementById('use-points');
+            const pointsAmount = document.getElementById('points-amount').textContent;
+            const totalAmountElement = document.getElementById('total-amount');
+
+            const points = parseInt(pointsAmount, 10);
+
+            usePointsButton.addEventListener('click', function() {
+                let totalAmount = parseInt(totalAmountElement.textContent.replace(' ₽', ''), 10);
+
+                if (usePointsButton.classList.contains('default')) {
+                    totalAmount -= points;
+                    usePointsButton.classList.remove('default');
+                    usePointsButton.classList.add('inactive');
+                } else {
+                    totalAmount += points;
+                    usePointsButton.classList.remove('inactive');
+                    usePointsButton.classList.add('default');
+                }
+
+                totalAmountElement.textContent = `${totalAmount} ₽`;
+            });
+        });
+
+    </script>
+</body>
+</html>

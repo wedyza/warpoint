@@ -21,6 +21,14 @@ html{
 a{
     text-decoration: none;
 }
+a,
+button{
+    cursor: pointer;
+}
+p,
+span{
+    cursor: default;
+}
 ul{
     list-style-type: none;
 }
@@ -38,6 +46,14 @@ main{
     z-index: 2;
     opacity: 0;
     cursor: pointer;
+}
+.error-input{
+    border: 1px solid var(--red-color);
+}
+.error-text{
+    color: var(--red-color);
+    position: absolute;
+    top: 68px;
 }
 :root{
     --background-color: #1B1B1B;
@@ -57,6 +73,10 @@ main{
 .button-text{
     font-size: 14px;
     color: var(--white-text);
+}
+.product-price{
+    display: flex;
+    gap: 5px;
 }
 .price-text{
     font-size: 24px;
@@ -103,6 +123,18 @@ h1,
 .nav-text{
     font-size: 14px;
     font-weight: 400;
+}
+.card-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-text);
+}
+.card-title{
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--white-text);
 }
 
 /*header*/

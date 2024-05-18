@@ -22,14 +22,6 @@
 #password2{
     margin-bottom: 10px;
 }
-.error-input{
-    border: 1px solid var(--red-color);
-}
-.error-text{
-    color: var(--red-color);
-    position: absolute;
-    top: 68px;
-}
 .toggle-button{
     position: absolute;
     top: calc(50%);

@@ -109,6 +109,23 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    position: relative;
+}
+.cart-amount{
+    position: absolute;
+    font-size: 10px;
+    top: calc(50% + 2px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-text);
+}
+.game-info{
+    position: absolute;
+    right: -20px;
+    background: transparent;
+    border: none;
+    height: 12px;
+    cursor: pointer;
 }
 .points-count{
     color: var(--red-color);
@@ -119,6 +136,7 @@ header{
     gap: 20px;
     background-color: var(--dark-gray);
     padding: 9px 12px;
+    position: relative;
 }
 .points-count{
     display: flex;

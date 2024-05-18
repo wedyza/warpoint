@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 <body>
@@ -136,35 +136,35 @@
                     <ul class="filter-options description-text">
                         <li class="size-options">
                             <div class="size-container">
-                                <input type="checkbox" id="size-xs" name="size" value="42" class="size-checkbox">
+                                <input type="checkbox" id="size-xs" name="size" value="42" class="checkbox">
                                 <img src="img/chekbox-false.svg" alt="unchecked">
                             </div>
                             <label for="size-xs">XS (42)</label>
                         </li>
                         <li class="size-options">
                             <div class="size-container">
-                                <input type="checkbox" id="size-s" name="size" value="44" class="size-checkbox">
+                                <input type="checkbox" id="size-s" name="size" value="44" class="checkbox">
                                 <img src="img/chekbox-false.svg" alt="unchecked">
                             </div>
                             <label for="size-s">S (44)</label>
                         </li>
                         <li class="size-options">
                             <div class="size-container">
-                                <input type="checkbox" id="size-m" name="size" value="46" class="size-checkbox">
+                                <input type="checkbox" id="size-m" name="size" value="46" class="checkbox">
                                 <img src="img/chekbox-false.svg" alt="unchecked">
                             </div>
                             <label for="size-m">M (46)</label>
                         </li>
                         <li class="size-options">
                             <div class="size-container">
-                                <input type="checkbox" id="size-l" name="size" value="48" class="size-checkbox">
+                                <input type="checkbox" id="size-l" name="size" value="48" class="checkbox">
                                 <img src="img/chekbox-false.svg" alt="unchecked">
                             </div>
                             <label for="size-l">L (48)</label>
                         </li>
                         <li class="size-options">
                             <div class="size-container">
-                                <input type="checkbox" id="size-xl" name="size" value="50" class="size-checkbox">
+                                <input type="checkbox" id="size-xl" name="size" value="50" class="checkbox">
                                 <img src="img/chekbox-false.svg" alt="unchecked">
                             </div>
                             <label for="size-xl">XL (50)</label>
@@ -368,22 +368,7 @@
             });
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.querySelectorAll('.size-checkbox');
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    const img = checkbox.nextElementSibling;
-                    console.log(checkbox.checked);
-                    if (checkbox.checked) {
-                        img.src = 'img/chekbox-true.svg';
-                    } else {
-                        img.src = 'img/chekbox-false.svg';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/checkbox.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const radioInputs = document.querySelectorAll('.price-container .radio-input');

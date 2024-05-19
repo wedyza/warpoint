@@ -238,6 +238,11 @@
     height: 20px;
     pointer-events: none;
 }
+.filters-button{
+    background-color: var(--blue-color);
+    border: none;
+    width: 180px;
+}
 /*filters*/
 
 /*pagination*/

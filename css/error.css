@@ -1,0 +1,15 @@
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+    align-items: start;
+}
+.big-text{
+    margin-top: 50px;
+    color: var(--white-text);
+    width: 640px;
+}
+.black-button{
+    background-color: var(--card-background);
+    padding: 18px 84.5px;
+    margin-top: 73px;
+}

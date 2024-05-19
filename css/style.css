@@ -104,6 +104,7 @@ h1,
     letter-spacing: -3px;
 }
 .big-text{
+    letter-spacing: -1px;
     font-size: 22px;
     color: var(--gray-text);
     font-weight: 500;
@@ -268,10 +269,11 @@ input[type="search"] {
 
 /*footer*/
 footer{
+    padding-left: 200px;
+    padding-right: 200px;
     height: 447px;
     display: flex;
-    justify-content: center;
-    gap: 93px;
+    justify-content: space-between;
 }
 .footer-company{
     margin-right: 2px;

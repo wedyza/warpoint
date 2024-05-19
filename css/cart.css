@@ -84,6 +84,8 @@
     background-color: transparent;
     border: none;
     color: var(--white-text);
+    margin-top: -6px;
+    font-weight: 600;
 }
 .change-amount > span{
     cursor: pointer;
@@ -174,7 +176,7 @@
     font-size: 20px;
     background-color: transparent;
     border: none;
-    margin-top: 25px;
+    margin-top: 15px;
     text-decoration: underline;
     transition: .1s;
 }

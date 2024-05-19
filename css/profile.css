@@ -9,7 +9,7 @@ main{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
 }
 .history{
     width: 242px;

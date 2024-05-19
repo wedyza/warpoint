@@ -90,7 +90,7 @@ h1,
 .h1-text{
     font-family: 'Oswald';
     text-transform: uppercase;
-    font-size: 82px;
+    font-size: 92px;
     color: var(--white-text);
     font-weight: 500;
     letter-spacing: -3px;
@@ -98,7 +98,7 @@ h1,
 .h2-text{
     font-family: 'Oswald';
     text-transform: uppercase;
-    font-size: 92px;
+    font-size: 82px;
     color: var(--white-text);
     font-weight: 500;
     letter-spacing: -3px;

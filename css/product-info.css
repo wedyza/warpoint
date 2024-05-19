@@ -106,7 +106,6 @@ main{
     width: 100%;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
 }
 #reviews-left,
 #reviews-right{
@@ -116,6 +115,7 @@ main{
 #change-reviews-page{
     display: flex;
     gap: 17px;
+    margin-left: 743px;
 }
 .review-card{
     position: relative;

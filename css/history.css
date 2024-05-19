@@ -132,3 +132,20 @@ main{
     justify-content: center;
     margin-top: 80px;
 }
+.history-title{
+    position: relative;
+}
+.history-title::before{
+    z-index: -1;
+    content: "";
+    width: 220px;
+    height: 60px;
+    background-color: var(--blue-color);
+    position: absolute;
+    top: 0;
+}
+.history-title::before {
+    transform: skewX(-20deg);
+    right: -50px;
+    top: 60px;
+}

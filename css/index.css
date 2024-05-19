@@ -245,6 +245,9 @@
     background-color: var(--blue-color);
     border: none;
     width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*filters*/
 

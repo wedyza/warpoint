@@ -239,3 +239,30 @@
     pointer-events: none;
 }
 /*filters*/
+
+/*pagination*/
+#pagination-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+#pagination{
+    margin-top: 70px;
+    align-self: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.page-number{
+    color: var(--white-text);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.current-page{
+    border: 1px solid var(--red-color);
+}
+/*pagination*/

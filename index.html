@@ -269,7 +269,6 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="cat version2"></div>
                     <div class="card-img-container">
                         <img src="img/empty.png">
                     </div>
@@ -294,6 +293,22 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="pagination-container">
+                <div id="pagination">
+                    <a href="#" id="page-to-left"><img src="img/white-left.svg" alt="to left"></a>
+                    
+                    <p class="page-number nav-text current-page">1</p>
+                    <p class="page-number nav-text">2</p>
+                    <p class="page-number nav-text">3</p>
+                    <p class="page-number nav-text">4</p>
+                    <p class="page-number nav-text">5</p>
+                    <p class="page-number nav-text">6</p>
+                    <p class="page-number nav-text">7</p>
+                    <p class="page-number nav-text">8</p>
+                    
+                    <a href="#" id="page-to-right"><img src="img/white-right.svg" alt="to right"></a>
                 </div>
             </div>
         </section>
@@ -372,7 +387,7 @@
                 const filterTitle = document.querySelector('#category-title');
                 if (categoryOption.tagName === 'LI') {
                     const parentList = categoryOption.closest('.filter-options-second');
-                    if (parentList) { // проверяем, что parentList не равен null
+                    if (parentList) {
                         const parentOption = parentList.closest('.filter-option');
                         const selectedOptionText = categoryOption.textContent;
                         filterTitle.textContent = selectedOptionText;
@@ -416,6 +431,7 @@
             }
         });
     </script>
+    <script src="js/pagination.js"></script>
     <script src="js/preloader.js"></script>
     <script src="js/cats-count.js"></script>
 </body>

@@ -20,7 +20,7 @@
             </div>
         </section>
         <section id="main-content">
-            <x-filters/>
+            <x-filters :categories="$categories"/>
             <div id="product-list">
                 @foreach ($products as $product)
                     <x-product-card :product="$product"/>
@@ -37,6 +37,26 @@
     </main>
     @push('scripts')
     <script>
+        let buttonA = document.querySelector('.filters-button');
+        let chosenCategory = 'all';
+        let chosenPrice = 'all';
+        let url = '?';
+        function filter(){
+            parse('category', chosenCategory);
+            parse('price', chosenPrice);
+            window.location.search = url;
+        }
+        function parse(word, filter){
+            let reg = new RegExp(word+"\=.", "i");
+            if (reg.test(url)){
+                url.replace(reg, word + "=" + filter);
+            } else {
+                url += "&" + word + "=" + filter;
+            }
+
+            buttonA.href = url;
+        }
+
         const radioButtons = document.querySelectorAll('.price-options input[type="radio"]');
             radioButtons.forEach(radioButton => {
             radioButton.addEventListener('click', () => {
@@ -46,6 +66,7 @@
                 } else {
                     const label = document.querySelector(`label[for="price-${radioButton.id.split('-').pop()}"]`);
                     filterTitle.textContent = label.textContent;
+                    chosenPrice = label.textContent;
                 }
             });
             });
@@ -60,6 +81,7 @@
                     if (parentList) { // проверяем, что parentList не равен null
                         const parentOption = parentList.closest('.filter-option');
                         const selectedOptionText = categoryOption.textContent;
+                        chosenCategory = categoryOption.textContent;
                         filterTitle.textContent = selectedOptionText;
                     }
                 } 
@@ -73,14 +95,7 @@
     </script>
     <script src="js/checkbox.js"></script>
     <script>
-        // let get_image = () => axios.get('https://api.unsplash.com/photos/random?client_id=lD0KzIzoKVGdfanBdclwzv-mm535YJh_-wGk3LxPC0U&query=sneakers').catch((response) => 'fail').then((response) => response);
         document.addEventListener('DOMContentLoaded', function() {
-            // document.querySelectorAll('.card-img-container').forEach( (el) => {
-            //     // el.src = get_image().then( (e) => e.data.urls.raw);
-            //     el.querySelector('img').src = ;
-            //     console.log(el);    
-            // })
-
             const radioInputs = document.querySelectorAll('.price-container .radio-input');
             const radioImages = document.querySelectorAll('.price-container .radio-img');
             radioInputs.forEach(function(radioInput) {

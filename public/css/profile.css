@@ -2,6 +2,27 @@ main{
     padding-left: 200px;
     padding-right: 200px;
 }
+form button::after,
+form button::before{
+    border: none;
+}
+#password-change{
+    position: relative;
+}
+#password-change::before{
+    z-index: -1;
+    content: "";
+    width: 100px;
+    height: 120px;
+    border: 3px solid var(--red-color);
+    position: absolute;
+    top: 0;
+}
+#password-change::before {
+    transform: skewX(-10deg);
+    right: -100px;
+    top: 200px;
+}
 .adress-input{
     position: relative;
 }

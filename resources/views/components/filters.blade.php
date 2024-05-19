@@ -6,33 +6,18 @@
         </div>
         <ul class="filter-options description-text filter-with-second">
             <li class="filter-option"><p>Новинки</p></li>
-            <li class="li-categories filter-option">
-                <p>Обувь</p>
-                <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
-                <ul class="filter-options-second">
-                    <li>Все</li>
-                    <li>Сланцы</li>
-                    <li>Кеды</li>
-                </ul>
-            </li>
-            <li class="li-categories filter-option">
-                <p>Аксессуары</p>
-                <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
-                <ul class="filter-options-second">
-                    <li>что-то</li>
-                    <li>что-то другое</li>
-                    <li>еще что-то</li>
-                </ul>
-            </li>
-            <li class="li-categories filter-option">
-                <p>Обувь</p>
-                <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
-                <ul class="filter-options-second">
-                    <li>Все</li>
-                    <li>Сланцы</li>
-                    <li>Кеды</li>
-                </ul>
-            </li>
+            @foreach ($categories as $category)
+                <li class="li-categories filter-option">
+                    <p>{{ $category->name }}</p>
+                    <img src="img/right-arrow-tr.svg" width="5px" class="arrow-img">
+                    <ul class="filter-options-second">
+                        @foreach ($category->subcategories as $sub)
+                            <li>{{ $sub->name }}</li>
+                        @endforeach
+                    </ul>
+                </li>
+            @endforeach
+            
         </ul>
     </div>
     <div class="filter-container">
@@ -78,5 +63,5 @@
             </li>
         </ul>
     </div>
-    <a class="blue-button button-text filters-button" href="javascript:void()">Применить</a>
+    <a class="blue-button button-text filters-button" href="#" onclick="filter();">Применить</a>
 </div>

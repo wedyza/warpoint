@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Cats;
 use App\Models\Product;
+use App\Models\Subcategory;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -22,12 +26,42 @@ class UserController extends Controller
     }
 
     public function index(){
+
+        function parsePrice($price){
+            switch($price){
+                case 'До 750':
+                    return Product::where('price', '<', 750);
+                case '750 - 2000':
+                    return Product::where('price', '>', 750)->where('price', '<', 2000);
+                case '2000 - 7500':
+                    return Product::where('price', '>', 2000)->where('price', '<', 7500);
+                case '7500 и дороже':
+                    return Product::where('price', '>', 7500);
+                default:
+                    return Product::where('price', '>', 0);
+            }
+        }
+
+        
+
+
+        // if (request('price') == 'all' and request('category') != 'all'){
+        //     $subcategory = Subcategory::where('name', request('category'))->get()[0];
+        //     $products = Product::where('subcategory_id', $subcategory->id)->get();
+        // } else if (request('price') != 'all' and request('category') != 'all'){
+        //     $subcategory = Subcategory::where('name', request('category'))->get()[0];
+        //     $products = parsePrice(request('price'))->where('subcategory_id', $subcategory->id)->get();
+        // } else if (request('price') != 'all' and request('category') == 'all'){
+        //     $products = parsePrice(request('price'))->get();
+        // } else {
         if (request('input')){
             $products = Product::where('name', 'LIKE','%' .  request('input') . '%')->get();
         } else 
             $products = Product::latest()->simplePaginate(12);
+        // }
         return view('index', [
-            'products' => $products
+            'products' => $products,
+            'categories' => Category::all()
             // 'amount' => $amount
         ]);
     }
@@ -53,5 +87,41 @@ class UserController extends Controller
         return view('user.history', [
             'orders' => $orders
         ]);
+    }
+
+    public function change(Request $request){
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+
+        $user = User::find(auth()->user()->id);
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->save();
+    
+        return back();
+    }
+
+    public function passwordChange(Request $request){
+        // ddd($request);
+        $data = $request->validate([
+            'password_old' => 'required|password',
+            'password' => 'required',
+            'password_repeat' => 'required|same:password'
+        ]);
+
+        $user = User::find(auth()->user()->id);
+        // ddd(Hash::check($user->password, bcrypt($data['password_old'])));
+        // if (!Hash::check(bcrypt($data['password_old']), $user->password ))
+        //     return back()->withErrors(['password' => 'Старый пароль не верен!']);
+
+        if ($data['password'] != $data['password_repeat'])
+            return back()->withErrors(['password' => 'Пароли не совпадают!']);
+
+        $user->password = $data['password'];
+        $user->save();
+
+        return back();
     }
 }

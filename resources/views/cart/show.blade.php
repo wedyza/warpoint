@@ -248,7 +248,7 @@
                 let totalAmount = parseInt(totalAmountElement.textContent.replace(' ₽', ''), 10);
                 use_points = !use_points;
                 if (usePointsButton.classList.contains('default')) {
-                    if (totalAmount - points / totalAmount > 0.3){
+                    if (points/ totalAmount > 0.3){
                         totalAmount *= 0.7;
                     } else {
                         totalAmount -= points;
@@ -257,7 +257,7 @@
                     usePointsButton.classList.remove('default');
                     usePointsButton.classList.add('inactive');
                 } else {
-                    if (totalAmount - points / totalAmount > 0.3){
+                    if (points / totalAmount > 0.3){
                         totalAmount /= 0.7;
                     } else {
                         totalAmount += points;

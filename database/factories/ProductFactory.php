@@ -16,7 +16,7 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->word(),
-            'price' => $this->faker->randomFloat(2, 2000, 5000),
+            'price' => $this->faker->randomFloat(2, 500, 10000),
             'description' => $this->faker->sentence(),
             'avatar' => 'https://source.unsplash.com/random',
             'subcategory_id' => Subcategory::factory(1)->create()[0]->id

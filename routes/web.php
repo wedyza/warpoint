@@ -40,6 +40,8 @@ Route::get('about/{product:id}', [ProductController::class, 'about'])->middlewar
 Route::delete('/remove', [ProductController::class, 'destroy'])->middleware('auth');
 
 Route::get('/profile', [UserController::class, 'profile'])->middleware('auth');
+Route::post('/profile', [UserController::class, 'change'])->middleware('auth');
+Route::post('/password-change', [UserController::class, 'passwordChange'])->middleware('auth');
 Route::get('/profile/orders-history', [UserController::class, 'history'])->middleware('auth');
 
 Route::post('/pay', [ProductController::class, 'pay'])->middleware('auth');

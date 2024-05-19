@@ -129,7 +129,7 @@
     position: absolute;
     z-index: 2;
     top: 46px;
-    border-top: 10px solid var(--background-color);
+    border-top: 20px solid var(--background-color);
     padding: 20px 15px;
     padding-right: 0;
     gap: 10px;
@@ -157,6 +157,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.filter-options::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--dark-gray);
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 8px);
 }
 .filter-options{
     display: none;
@@ -242,11 +253,76 @@
     pointer-events: none;
 }
 .filters-button{
-    background-color: var(--blue-color);
+    background-color: var(--dark-gray);
     border: none;
     width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.filters-button::before{
+    z-index: -1;
+    content: "";
+    width: 170px;
+    height: 40px;
+    background-color: var(--blue-color);
+    position: absolute;
+    top: 0;
+}
+.filters-button::before {
+    transform: skewX(-12deg);
+    right: -70px;
+    top: 19px;
+}
+.filter-container:first-child{
+    position: relative;
+}
+.filter-container:first-child::before{
+    z-index: -1;
+    content: "";
+    width: 170px;
+    height: 40px;
+    background-color: var(--red-color);
+    position: absolute;
+    top: 0;
+}
+.filter-container:first-child::before {
+    transform: skewX(12deg);
+    left: -70px;
+    top: -14px;
 }
 /*filters*/
+
+.product-card:first-child::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--blue-color);
+    position: absolute;
+    top: 0;
+}
+.product-card:first-child::before {
+    transform: skewX(10deg);
+    left: -50px;
+    top: 500px;
+}
+
+.product-card:nth-child(6)::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--red-color);
+    position: absolute;
+    top: 0;
+}
+.product-card:nth-child(6)::before {
+    transform: skewX(-10deg);
+    right: -60px;
+    top: 430px;
+}
 
 /*pagination*/
 #pagination-container{

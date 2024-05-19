@@ -170,6 +170,37 @@ main{
     margin-top: 50px;
     position: relative;
 }
+#gallery::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--red-color);
+    position: absolute;
+    top: 0;
+}
+#gallery::before {
+    transform: skewX(10deg);
+    left: -40px;
+    top: -19px;
+}
+.review-card:nth-child(2){
+    position: relative;
+}
+.review-card:nth-child(2)::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--blue-color);
+    position: absolute;
+    top: 0;
+}
+.review-card:nth-child(2)::before {
+    transform: skewX(-10deg);
+    right: -60px;
+    top: -100px;
+}
 #img-buttons{
     position: absolute;
     top: 145px;

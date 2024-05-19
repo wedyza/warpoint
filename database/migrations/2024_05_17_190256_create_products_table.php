@@ -15,11 +15,13 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->foreignId('category_id')->nullable(false)->constrained()->cascadeOnDelete();
             $table->string('name')->nullable(false);
             $table->string('description')->nullable(false);
             $table->integer('price')->nullable(false);
             $table->string('avatar')->nullable(false);
+            $table->foreignId('subcategory_id')->constrained()->cascadeOnDelete();
         });
     }
 

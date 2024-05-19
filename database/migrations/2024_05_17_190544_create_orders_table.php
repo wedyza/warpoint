@@ -16,8 +16,10 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->integer('status')->nullable(false);
-            $table->integer('delivery_type')->nullable(false);
             $table->string('address')->nullable(false);
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->date('date')->nullable(false);
+            $table->integer('price')->nullable(false);
         });
     }
 

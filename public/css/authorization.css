@@ -1,0 +1,81 @@
+#login-form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 462px;
+    gap: 20px;
+}
+.input-container{
+    position: relative;
+}
+#email,
+.password,
+#name,
+#phone-number,
+#address{
+    width: calc(100% - 60px);
+    height: 65px;
+    padding: 0 30px;
+    outline: none;
+}
+#login-form #email,
+#login-form #password1,
+#login-form #password2{
+    margin-bottom: 10px;
+}
+.toggle-button{
+    position: absolute;
+    top: calc(50%);
+    transform: translate(0, -50%);
+    right: 30px;
+    background-color: transparent;
+    border: none;
+}
+.forgot-password{
+    align-self: flex-end;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+form > button{
+    height: 80px;
+    background-color: var(--blue-color);
+    border: none;
+    cursor: pointer;
+    transition: .1s;
+}
+form > button:hover{
+    background-color: #2E5AC5;
+}
+.to-signup-title{
+    align-self:self-start;
+}
+.to-signup > p{
+    color: var(--white-text);
+}
+.to-signup > p.input-text{
+    width: 219px;
+}
+.to-signup > a{
+    display: flex;
+    gap: 5px;
+}
+.to-signup{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox-text{
+    color: var(--gray-text);
+    font-size: 12px;
+}
+.checkbox-agreements{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+.agreements-links{
+    text-decoration: underline;
+    color: var(--gray-text);
+}

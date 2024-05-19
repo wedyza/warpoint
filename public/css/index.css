@@ -1,12 +1,3 @@
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#main-content{
-    margin-top: 100px;
-    padding-bottom: 130px;
-}
 .h1-first-line{
     background-color: var(--red-color);
     padding: 0 30px 0 46px;
@@ -74,10 +65,6 @@ main{
     gap: 30px;
     align-items: center;
 }
-.product-price{
-    display: flex;
-    gap: 5px;
-}
 .product-to-cart{
     width: 170px;
     height: 49px;
@@ -86,14 +73,14 @@ main{
     cursor: pointer;
     transition: .1s;
 }
-.product-to-cart:hover{
-    background-color: #2E5AC5;
-}
 .product-open-info{
     margin-top: 30px;
     display: flex;
     align-items: center;
     gap: 5px;
+}
+.product-open-info > p{
+    cursor: pointer;
 }
 .description-container{
     width: 331px;
@@ -115,3 +102,175 @@ main{
 }
 /*card list*/
 
+/*filters*/
+#filters-container{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 83px;
+}
+.filter-header{
+    width: 180px;
+    height: 46px;
+    background-color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.filter-options{
+    width: 149px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-gray);
+    position: absolute;
+    z-index: 2;
+    top: 46px;
+    border-top: 10px solid var(--background-color);
+    padding: 20px 15px;
+    padding-right: 0;
+    gap: 10px;
+}
+.filter-with-second{
+    gap: 0;
+}
+.filter-option{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    transition: .1s;
+    cursor: pointer;
+}
+.filter-option > ul{
+    cursor: default;
+}
+.filter-option:hover > p{
+    color: var(--blue-color);
+}
+.filter-option > p{
+    transition: .1s;
+}
+.filter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filter-options{
+    display: none;
+}
+.filter-container:hover .filter-options{
+    display: flex;
+}
+.filter-options:hover{
+    display: flex;
+}
+.li-categories{
+    display: flex;
+    justify-content: space-between;
+}
+.li-categories:hover .arrow-img {
+    content: url("../img/left-arrow.svg");
+}
+.filter-options-second{
+    position: absolute;
+    left: 164px;
+    top: 0;
+    padding:20px 40px 20px 10px; 
+    background-color: var(--light-gray);
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filter-options-second > li{
+    cursor: pointer;
+    transition: .1s;
+}
+.filter-options-second > li:hover{
+    color: var(--blue-color);
+}
+.filter-options-second{
+    display: none;
+}
+.filter-option:hover .filter-options-second{
+    display: flex;
+}
+.filter-options-second:hover .filter-option{
+    display: flex;
+}
+.filter-options-second:hover{
+    display: flex;
+}
+.price-options{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.size-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.size-options,
+.price-options{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.price-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.radio-input {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+.radio-img {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+.filters-button{
+    background-color: var(--blue-color);
+    border: none;
+    width: 180px;
+}
+/*filters*/
+
+/*pagination*/
+#pagination-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+#pagination{
+    margin-top: 70px;
+    align-self: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.page-number{
+    color: var(--white-text);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.current-page{
+    border: 1px solid var(--red-color);
+}
+/*pagination*/

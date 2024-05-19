@@ -6,7 +6,9 @@ use App\Models\Category;
 use App\Models\DeliveryType;
 use App\Models\Product;
 use App\Models\StatusCode;
+use App\Models\Subcategory;
 use Illuminate\Database\Seeder;
+use Unsplash\OAuth2\Client\Provider\Unsplash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -28,8 +30,12 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $categories = Category::factory(15)->create();
         foreach($categories as $category){
-            Product::factory(10)->create([
+            $subcategory = Subcategory::factory()->create([
                 'category_id' => $category->id
+            ]);
+            $products = Product::factory(10)->create([
+                'category_id' => $category->id,
+                'subcategory_id' => $subcategory->id
             ]);
         };
 

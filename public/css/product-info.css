@@ -1,0 +1,223 @@
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#main-description{
+    width: 380px;
+}
+#main-product-info{
+    display: flex;
+    gap: 108px;
+}
+.page-path{
+    align-self: flex-start;
+    color: var(--gray-text);
+}
+#product-page{
+    width: 100%;
+    margin-top: 30px;
+}
+#product-name > .description-text{
+    color: var(--gray-text);
+}
+#main-product-info{
+    margin-left: 59px;
+}
+#main-description{
+    color: var(--white-text);
+    margin-top: 40px;
+}
+#rating-container{
+    height: 39px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#rating-value{
+    color: var(--white-text);
+    margin-left: 10px;
+}
+#total-amount{
+    color: var(--red-color);
+    margin-top: 30px;
+}
+#sizes-text{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.sizes-list{
+    display: flex;
+    margin-top: 30px;
+    gap: 26px;
+}
+.sizes-list > button{
+    background-color: transparent;
+    color: var(--white-text);
+    border: none;
+}
+.sizes-list > .chosen-size{
+    color: var(--blue-color);
+    text-decoration: underline;
+}
+#full-product-info{
+    margin-top: 70px;
+}
+#product-characteristics{
+    display: flex;
+    flex-direction: column;
+    color: var(--white-text);
+    margin-top: 20px;
+    width: 605px;
+}
+.product-characteristic{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray-text);
+}
+.characteristic-value{
+    width: 50%;
+}
+#product-info-right{
+    position: relative;
+}
+#add-to-cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 49px;
+    background-color: var(--blue-color);
+    border: none;
+    transition: .1s;
+}
+#add-to-cart:hover{
+    background-color: #2E5AC5;
+}
+#reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 100px;
+}
+#reviews-header{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+#reviews-left,
+#reviews-right{
+    background-color: transparent;
+    border: none;
+}
+#change-reviews-page{
+    display: flex;
+    gap: 17px;
+    margin-left: 743px;
+}
+.review-card{
+    position: relative;
+    width: 470px;
+    padding: 30px;
+    padding-bottom: 60px;
+    background-color: var(--card-background);
+}
+.review-header{
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+.review-content{
+    color: var(--white-text);
+    margin-top: 30px;
+    width: 367px;
+}
+.review-date{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+#reviews-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+    justify-items: center;
+}
+.image-container{
+    width: 433px;
+    height: 318px;
+}
+.small-imgs{
+    display: flex;
+    gap: 6px;
+    margin-top: 15px;
+}
+.small-image-container{
+    width: 50px;
+    height: 50px;
+}
+.image-container img,
+.small-image-container img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+#gallery{
+    margin-top: 50px;
+    position: relative;
+}
+#img-buttons{
+    position: absolute;
+    top: 145px;
+    left: -60px;
+    width: calc(100% + 120px);
+    display: flex;
+    justify-content: space-between;
+}
+#img-to-left,
+#img-to-right{
+    background-color: transparent;
+    border: none;
+}
+.review-form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+.review-form > button{
+    width: 268px;
+    height: 49px;
+    align-self: flex-end;
+    background-color: var(--blue-color);
+    border: none;
+    color: var(--white-text);
+}
+.review-input{
+    width: calc(100% - 60px);
+    height: 65px;
+    background-color: var(--light-gray);
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: var(--white-text);
+}
+.symbols-amount,
+.review-stars{
+    position: absolute;
+    top: -25px;
+}
+.review-stars{
+    left: 0px;
+    top: -30px;
+}
+.symbols-amount{
+    right: -0;
+    color: var(--gray-text);
+}

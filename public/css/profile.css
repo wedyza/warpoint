@@ -1,0 +1,46 @@
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.adress-input{
+    position: relative;
+}
+.profile-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.history{
+    width: 242px;
+    height: 56px;
+    background-color: var(--card-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#profile-forms form{
+    width: 462px;
+    position: relative;
+}
+#profile-forms input{
+    width: 100%;
+    margin-bottom: 15px;
+}
+#profile-forms .normal-title{
+    margin-bottom: 30px;
+}
+#profile-forms{
+    display: flex;
+    gap: 116px;
+    margin-top: 70px;
+    align-self: flex-start;
+}
+#profile-forms #email{
+    margin-bottom: 30px;
+}
+#profile-forms button{
+    width: 242px;
+    height: 49px;
+    margin-top: 40px;
+}

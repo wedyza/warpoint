@@ -1,7 +1,7 @@
 <footer class="footer-text">
     <div class="footer-company">
         <a href="#" class="logo-link">
-            <img src="img/logo.svg" alt="logo" width="233px" height="33px">
+            <img src="/img/logo.svg" alt="logo" width="233px" height="33px">
         </a>
         <div class="company-info">
             <p>ИП Скоробогатов Владимир Владимирович</p>
@@ -9,8 +9,8 @@
             <p>ОГРНИП: 321665800029893</p>
         </div>
         <div class="apps-links">
-            <a href="#" class="app-link"><img src="img/appstore.png" alt="app store" width="160px" height="45px"></a>
-            <a href="#" class="app-link"><img src="img/playmarket.png" alt="google play" width="160px" height="45px"></a>
+            <a href="#" class="app-link"><img src="/img/appstore.png" alt="app store" width="160px" height="45px"></a>
+            <a href="#" class="app-link"><img src="/img/playmarket.png" alt="google play" width="160px" height="45px"></a>
         </div>
         <div class="copyrights">
             <p>© 2020-2023. WARPOINT. Все права защищены. </p>

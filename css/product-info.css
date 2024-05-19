@@ -183,3 +183,41 @@ main{
     background-color: transparent;
     border: none;
 }
+.review-form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+.review-form > button{
+    width: 268px;
+    height: 49px;
+    align-self: flex-end;
+    background-color: var(--blue-color);
+    border: none;
+    color: var(--white-text);
+}
+.review-input{
+    width: calc(100% - 60px);
+    height: 65px;
+    background-color: var(--light-gray);
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: var(--white-text);
+}
+.symbols-amount,
+.review-stars{
+    position: absolute;
+    top: -25px;
+}
+.review-stars{
+    left: 0px;
+    top: -30px;
+}
+.symbols-amount{
+    right: -0;
+    color: var(--gray-text);
+}

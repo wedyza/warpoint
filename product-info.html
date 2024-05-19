@@ -183,6 +183,18 @@
                     <p class="review-date description-text">16.02.2024</p>
                 </div>
             </section>
+            <form class="review-form">
+                <div class="review-stars">
+                    <img class="rating-stars" src="img/empty-rating.svg">
+                    <img class="rating-stars" src="img/empty-rating.svg">
+                    <img class="rating-stars" src="img/empty-rating.svg">
+                    <img class="rating-stars" src="img/empty-rating.svg">
+                    <img class="rating-stars" src="img/empty-rating.svg">
+                </div>
+                <p class="symbols-amount nav-text">0 / 288</p>
+                <input class="review-input" type="text" placeholder="Начните писать Ваш отзыв">
+                <button class="blue-button" type="submit">Отправить отзыв</button>
+            </form>
         </section>
     </main>
     <footer class="footer-text">
@@ -269,6 +281,7 @@
             bigImage.src = smallImgs[currentIndex].src;
         });
     </script>
+    <script src="js/review.js"></script>
     <script src="js/preloader.js"></script>
     <script src="js/cats-count.js"></script>
 </body>

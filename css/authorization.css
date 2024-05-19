@@ -4,7 +4,6 @@
     flex-direction: column;
     width: 462px;
     gap: 20px;
-    margin-bottom: 200px;
 }
 .input-container{
     position: relative;
@@ -69,6 +68,7 @@ form > button:hover{
 }
 .checkbox-text{
     color: var(--gray-text);
+    font-size: 12px;
 }
 .checkbox-agreements{
     display: flex;

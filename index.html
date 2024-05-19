@@ -23,7 +23,11 @@
             <img src="img/logo.svg" alt="logo" width="233px" height="33px">
         </a>
         <nav id="nav-buttons">
-            <a href="#" class="nav-button"><img src="img/search.svg" alt="search"></a>
+            <button id="open-search-input" class="nav-button search-button"><img src="img/search.svg" alt="search"></button>
+            <form id="search-products">
+                <input type="search" id="search-input">
+                <button type="submit" class="nav-button search-button"><img src="img/search.svg" alt="search"></button>
+            </form>
             <a href="#" class="nav-button"><img src="img/profile.svg" alt="profile"></a>
             <a href="#" class="nav-button"><img src="img/cart.svg" alt="cart"><p class="cart-amount">2</p></a>
                                                                                     <!--тут если больше 9, то пишется 9+-->
@@ -265,6 +269,7 @@
                     </div>
                 </div>
                 <div class="product-card">
+                    <div class="cat version2"></div>
                     <div class="card-img-container">
                         <img src="img/empty.png">
                     </div>
@@ -395,6 +400,20 @@
                     selectedImg.src = 'img/radio-true.svg';
                 });
             });
+        });
+    </script>
+    <script>
+        const openSearchInput = document.getElementById('open-search-input');
+        const searchProducts = document.getElementById('search-products');
+        openSearchInput.addEventListener('click', () => {
+            searchProducts.style.display = 'flex';
+        });
+        document.addEventListener('click', (event) => {
+            const isClickInsideSearchProducts = searchProducts.contains(event.target);
+            const isClickInsideOpenSearchInput = openSearchInput.contains(event.target);
+            if (!isClickInsideSearchProducts && !isClickInsideOpenSearchInput) {
+                searchProducts.style.display = 'none';
+            }
         });
     </script>
     <script src="js/preloader.js"></script>

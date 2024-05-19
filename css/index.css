@@ -105,6 +105,7 @@
     gap: 30px;
     margin-bottom: 50px;
     position: relative;
+    margin-top: 83px;
 }
 .filter-header{
     width: 180px;
@@ -217,7 +218,7 @@
 .size-options,
 .price-options{
     display: flex;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
 }
 .price-container {

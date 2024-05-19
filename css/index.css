@@ -79,6 +79,9 @@
     align-items: center;
     gap: 5px;
 }
+.product-open-info > p{
+    cursor: pointer;
+}
 .description-container{
     width: 331px;
     height: 62px;

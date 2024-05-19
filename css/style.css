@@ -55,6 +55,14 @@ main{
     position: absolute;
     top: 68px;
 }
+.button-arrow{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.arrow{
+    margin-top: 60px;
+}
 :root{
     --background-color: #1B1B1B;
     --light-gray: #474747;

@@ -294,6 +294,36 @@
 }
 /*filters*/
 
+.product-card:first-child::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--blue-color);
+    position: absolute;
+    top: 0;
+}
+.product-card:first-child::before {
+    transform: skewX(10deg);
+    left: -50px;
+    top: 500px;
+}
+
+.product-card:nth-child(6)::before{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    height: 220px;
+    border: 3px solid var(--red-color);
+    position: absolute;
+    top: 0;
+}
+.product-card:nth-child(6)::before {
+    transform: skewX(-10deg);
+    right: -60px;
+    top: 430px;
+}
+
 /*pagination*/
 #pagination-container{
     display: flex;

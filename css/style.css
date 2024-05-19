@@ -338,102 +338,101 @@ footer{
     position: absolute;
 }
 .product-card > .version1{
-    width: 170px;
-    height: 260px;
-    top: -30px;
+    width: 361px;
+    height: 99px;
+    top: -99px;
     left: -30px;
-    background-image: url('../img/appstore.png');
+    background-image: url('../img/cat-lie-2.svg');
 }
 .product-card > .version2{
-    width: 260px;
-    height: 170px;
-    bottom: -30px;
-    right: -60px;
-    background-image: url('../img/appstore.png');
+    width: 90px;
+    height: 296px;
+    bottom: 10px;
+    left: -90px;
+    background-image: url('../img/cat-sit-1.svg');
 }
 
 .purchase-card > .version1{
-    width: 300px;
-    height: 200px;
+    width: 361px;
+    height: 218px;
     bottom: -30px;
-    left: -60px;
-    background-image: url('../img/appstore.png');
+    left: -100px;
+    background-image: url('../img/cat-lie-3.svg');
 
 }
 .purchase-card > .version2{
-    width: 300px;
-    height: 200px;
-    top: -30px;
+    width: 270px;
+    height: 129px;
+    bottom: -129px;
     right: -60px;
-    background-image: url('../img/appstore.png');
+    background-image: url('../img/cat-sit-3.svg');
 
 }
 
 .cart-product-card > .version1{
-    width: 110px;
-    height: 220px;
-    bottom: -60px;
+    width: 352px;
+    height: 89px;
+    bottom: -89px;
     left: -60px;
-    background-image: url('../img/appstore.png');
+    background-image: url('../img/cat-lie-4.svg');
 
 }
 .cart-product-card > .version2{
-    width: 200px;
-    height: 170px;
-    top: -30px;
-    right: -60px;
-    background-image: url('../img/appstore.png');
+    width: 270px;
+    height: 296px;
+    bottom: -90px;
+    right: 160px;
+    background-image: url('../img/cat-sit-4.svg');
 
 }
 
 .review-card > .version1{
-    width: 110px;
-    height: 220px;
-    bottom: -60px;
-    right: -60px;
-    background-image: url('../img/appstore.png');
+    width: 218px;
+    height: 361px;
+    bottom: -100px;
+    left: -218px;
+    background-image: url('../img/cat-lie-5.svg');
 
 }
 .review-card > .version2{
-    width: 200px;
-    height: 170px;
-    top: -30px;
-    left: -60px;
-    background-image: url('../img/appstore.png');
+    width: 124px;
+    height: 296px;
+    top: -20px;
+    right: -124px;
+    background-image: url('../img/cat-sit-5.svg');
 
 }
 
 #user-info-form > .version1{
-    width: 110px;
-    height: 220px;
+    width: 361px;
+    height: 218px;
     bottom: -60px;
     right: -60px;
-    background-image: url('../img/appstore.png');
+    background-image: url('../img/cat-lie-3.svg');
 
 }
 #user-info-form > .version2{
-    width: 200px;
-    height: 170px;
-    top: -30px;
-    left: -60px;
-    background-image: url('../img/appstore.png');
+    width: 270px;
+    height: 296px;
+    bottom: -50px;
+    right: 160px;
+    background-image: url('../img/cat-sit-4.svg');
 
 }
 
 #password-change > .version1{
-    width: 110px;
-    height: 220px;
-    bottom: -60px;
+    width: 361px;
+    height: 218px;
+    top: -100px;
     right: -60px;
-    background-image: url('../img/appstore.png');
+    background-image: url('../img/cat-lie-3.svg');
 
 }
 #password-change > .version2{
-    width: 200px;
-    height: 170px;
-    top: -30px;
-    left: -60px;
-    background-image: url('../img/appstore.png');
-
+    width: 270px;
+    height: 296px;
+    bottom: 30px;
+    right: -60px;
+    background-image: url('../img/cat-sit-4.svg');
 }
 /*cats*/

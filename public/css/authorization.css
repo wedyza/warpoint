@@ -46,8 +46,8 @@ form > button{
     transition: .1s;
     position: relative;
 }
-form > button::before,
-form > button::after {
+#login-form > button::before,
+#login-form > button::after {
     z-index: -1;
     content: "";
     width: 70px;
@@ -57,17 +57,17 @@ form > button::after {
     position: absolute;
     top: 0;
 }
-form > button::before {
+#login-form > button::before {
     transform: skewX(-12deg);
     right: -30px;
     top: -14px;
 }
-form > button::after {
+#login-form > button::after {
     transform: skewX(12deg);
     left: -30px;
     top: -14px;
 }
-form > button:hover{
+#login-form > button:hover{
     background-color: #2E5AC5;
 }
 .to-signup-title{

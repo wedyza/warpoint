@@ -68,15 +68,16 @@
         <div id="reviews-header">
             <p class="h2-text">Отзывы</p>
             <div id="change-reviews-page">
-                <button id="reviews-left">
+                <a href="/about/{{ $product->id }}{{ request('page') ? '/?page=' . ((int)request('page')-1) : '/' }}" id="reviews-left">
                     <img src="{{ asset('/img/to-left.svg') }}" alt="to left">
-                </button>
-                <button id="reviews-right">
+                </a>
+                <a href="/about/{{ $product->id }}{{ request('page') ? '/?page=' . ((int)request('page')+1) : '/?page=2' }}" id="reviews-right">
                     <img src="{{ asset('/img/to-right.svg') }}" alt="to right">
-                </button>
+                </a>
             </div>
         </div>
         <section id="reviews-list">
+            @foreach ($comments as $comment)
             <div class="review-card">
                 @if (random_int(1, 2) === 7)
                     <div class="cat version1"></div>
@@ -86,20 +87,18 @@
                     @endif
                 @endif
                 <div class="review-header">
-                    <p class="user-name normal-title">Дмитрий Точин</p>
+                    <p class="user-name normal-title">{{ $comment->user->name }}</p>
                     <div id="rating-container">
-                        <span id="rating-value" class="input-text">5.0</span>
+                        <span id="rating-value" class="input-text">{{ $comment->rate }}</span>
                         <img src="{{ asset('/img/rating.svg') }}" id="rating-img" width="18px" height="18px">
                     </div>
                 </div>
                 <p class="review-content input-text">
-                    Купил кеды здесь и очень доволен. 
-                    Удобные, стильные, хорошо сидят. Качество материалов отличное, 
-                    ноги не устают. Черный цвет универсальный, подходит ко всему. 
-                    Отличная вентиляция и прочная шнуровка. Рекомендую!
+                    {{ $comment->body }}
                 </p>
-                <p class="review-date description-text">16.02.2024</p>
+                <p class="review-date description-text">{{ $comment->date }}</p>
             </div>
+            @endforeach
         </section>
     </section>
 </main>

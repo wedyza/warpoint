@@ -30,12 +30,13 @@
                         <form class="review-form" action="/post-comment" method="POST">
                             @csrf
                             <input type="hidden" name="id" value="{{ $cart->product->id }}">
+                            <input type="hidden" name="rate" class="rate-stars" value="0">
                             <div class="review-stars">
-                                <img src="{{ asset('/img/rating.svg') }}">
-                                <img src="{{ asset('/img/rating.svg') }}">
-                                <img src="{{ asset('/img/rating.svg') }}">
-                                <img src="{{ asset('/img/rating.svg') }}">
-                                <img src="{{ asset('/img/rating.svg') }}">
+                                <img class="rating-stars" src="{{ asset('/img/empty-rating.svg') }}">
+                                <img class="rating-stars" src="{{ asset('/img/empty-rating.svg') }}">
+                                <img class="rating-stars" src="{{ asset('/img/empty-rating.svg') }}">
+                                <img class="rating-stars" src="{{ asset('/img/empty-rating.svg') }}">
+                                <img class="rating-stars" src="{{ asset('/img/empty-rating.svg') }}">
                             </div>
                             <p class="symbols-amount nav-text">0 / 288</p>
                             <input class="review-input" name="body" type="text" placeholder="Начните писать Ваш отзыв" required>
@@ -93,4 +94,5 @@
             })
         </script>
     @endpush
+    <script src="{{ asset('js/review.js') }}"></script>
 </x-layout>

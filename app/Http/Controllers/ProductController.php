@@ -29,7 +29,8 @@ class ProductController extends Controller
     public function about(Product $product){
 
         return view('product.about', [
-            'product' => $product
+            'product' => $product,
+            'comments' => $product->comments()->simplePaginate(4)
         ]);
     }
 

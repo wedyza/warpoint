@@ -12,10 +12,11 @@ class CommentController extends Controller
     public function create(Request $request){
         $data = $request->validate([
             'body' => 'required|max:288',
-            'id' => 'required|exists:products,id'
+            'id' => 'required|exists:products,id',
+            'rate' => 'required'
         ]);
         $body = ObsceneCensorRus::getFiltered($data['body']);
-        $rate = 5;
+        $rate = $data['rate'];
         $comment = new Comment;
         $comment->user_id = auth()->user()->id;
         $comment->body = $body;

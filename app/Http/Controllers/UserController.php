@@ -44,21 +44,22 @@ class UserController extends Controller
 
         
 
-
-        // if (request('price') == 'all' and request('category') != 'all'){
-        //     $subcategory = Subcategory::where('name', request('category'))->get()[0];
-        //     $products = Product::where('subcategory_id', $subcategory->id)->get();
-        // } else if (request('price') != 'all' and request('category') != 'all'){
-        //     $subcategory = Subcategory::where('name', request('category'))->get()[0];
-        //     $products = parsePrice(request('price'))->where('subcategory_id', $subcategory->id)->get();
-        // } else if (request('price') != 'all' and request('category') == 'all'){
-        //     $products = parsePrice(request('price'))->get();
-        // } else {
-        if (request('input')){
-            $products = Product::where('name', 'LIKE','%' .  request('input') . '%')->get();
-        } else 
-            $products = Product::latest()->simplePaginate(12);
-        // }
+        if ((!request('price') and !request('category')) or (request('price') == 'all' and request('category') == 'all')){
+            if (request('input')){
+                $products = Product::where('name', 'LIKE','%' .  request('input') . '%')->get();
+            } else 
+                $products = Product::latest()->simplePaginate(12);
+        }
+        else if (request('price') == 'all' and request('category') != 'all'){
+            $subcategory = Subcategory::where('name', request('category'))->get()[0];
+            $products = Product::where('subcategory_id', $subcategory->id)->get();
+        } else if (request('price') != 'all' and request('category') != 'all'){
+            // ddd(request());
+            $subcategory = Subcategory::where('name', request('category'))->get()[0];
+            $products = parsePrice(request('price'))->where('subcategory_id', $subcategory->id)->get();
+        } else if (request('price') != 'all' and request('category') == 'all'){
+            $products = parsePrice(request('price'))->get();
+        }
         return view('index', [
             'products' => $products,
             'categories' => Category::all()

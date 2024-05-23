@@ -1,6 +1,6 @@
 # Installing dependencies
 php -f composer.phar install
-
+sleep 10
 # Migrate db
 php artisan migrate --seed
 

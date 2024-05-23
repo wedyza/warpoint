@@ -16,21 +16,19 @@
         <a href="/login" class="nav-button"><img src="/img/profile.svg" alt="profile"></a>
         <a href="/cart" class="nav-button"><img src="/img/cart.svg" alt="cart"><p class="cart-amount"></p></a>
         @endguest
-
     </nav>
     @auth
     <div class="points-info">
-        <p class="button-text">Ваши баллы:</p>
+        <p class="button-text">Ищите котиков и получайте баллы!</p>
         <div class="points-count">
-            <p class="price-text">{{ auth()->user()->personal_points }}</p>
             <img src="/img/points.svg" alt="points">
         </div>
         <button id="game-info"><img src="/img/info.svg" alt="info"></button>
         <div id="game-info-container" class="description-text">
             <p id="game-info-text">Помогите найти котиков! 
-                На сайте спряталось несколько из них. 
+                На картинке спряталось несколько из них. 
                 Тыкайте мышкой на обнаруженного котика и 
-                зарабатывайте баллы! 5 котиков = 1 балл!</p>
+                зарабатывайте баллы! 3 котика = 1 балл!</p>
         </div>
     </div>
     @endauth
